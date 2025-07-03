@@ -264,6 +264,21 @@
      padding-right: 1.5rem;
     }
    }
+   /* Fix extra space below services on mobile */
+   @media (max-width: 639px) {
+    #services {
+     padding-bottom: 1rem !important;
+     margin-bottom: 0 !important;
+    }
+    /* Remove bottom margin from last row grid gap */
+    #services > div.max-w-7xl > div.grid {
+     margin-bottom: 0 !important;
+    }
+    /* Remove invisible service-card to avoid extra space */
+    #services > div.max-w-7xl > div.grid > .service-card.invisible {
+     display: none !important;
+    }
+   }
   </style>
  </head>
  <body class="bg-white text-slate-800">
@@ -463,7 +478,7 @@
    </div>
   </section>
   <!-- Our Services Section -->
-  <section class="bg-slate-50 py-16 px-6" id="services">
+  <section class="bg-slate-50 py-16 px-6 mb-6" id="services">
    <div class="max-w-7xl mx-auto text-center mb-12">
     <h3 class="text-3xl font-extrabold text-blue-700 mb-4 fade-in">Our Services</h3>
     <p class="text-slate-600 max-w-2xl mx-auto fade-in delay-1">
@@ -534,17 +549,16 @@
       workplace environment.
      </p>
     </div>
-    <div class="service-card invisible"></div>
    </div>
   </section>
   <!-- Our Approach Section -->
   <section
-   class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
+   class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6 md:px-0"
    id="about"
   >
    <div class="md:w-1/2 fade-in slide-in-left" style="animation-delay: 0.3s;">
-    <h3 class="text-3xl font-extrabold text-blue-700 mb-6 px-6 md:px-0">🌿 Our Approach</h3>
-    <p class="text-slate-700 text-lg leading-relaxed mb-6 px-6 md:px-0">
+    <h3 class="text-3xl font-extrabold text-blue-700 mb-6">🌿 Our Approach</h3>
+    <p class="text-slate-700 text-lg leading-relaxed mb-6">
      At True Advice Counseling Center, we believe healing begins with empathy,
      understanding, and a deep emotional connection. Our approach blends modern
      counseling techniques with the timeless wisdom of mindfulness and spiritual
@@ -558,7 +572,7 @@
      to your holistic healing.
     </p>
    </div>
-   <div class="md:w-1/2 fade-in slide-in-right px-6 md:px-0" style="animation-delay: 0.6s;">
+   <div class="md:w-1/2 fade-in slide-in-right" style="animation-delay: 0.6s;">
     <img
      alt="Professional portrait of Dr. Rajesh Kumar, a middle-aged male counselor wearing a suit, smiling warmly in a well-lit office environment"
      class="rounded-lg shadow-lg w-full max-w-sm mx-auto"
